@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { register } from 'redux/auth/operations';
+import { register } from '../../redux/auth/operations';
 import { Form } from './RegisterForm.styled';
 import { Box, TextField, Button, Paper } from '@mui/material';
 

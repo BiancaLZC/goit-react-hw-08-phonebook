@@ -5,8 +5,8 @@ import Filter from 'components/Filter';
 import Loader from 'components/Loader';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts } from 'redux/contacts/operations';
-import { getError, getIsLoading } from 'redux/contacts/selectors';
+import { fetchContacts } from '../../redux/contacts/operations';
+import { getError, getIsLoading } from '../../redux/contacts/selectors';
 import { Paper } from '@mui/material';
 
 const ContactsPage = () => {

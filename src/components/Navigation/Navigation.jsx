@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 
-import { getIsLoggedIn } from 'redux/auth/selectors';
+import { getIsLoggedIn } from '../../redux/auth/selectors';
 import { Box } from '@mui/material';
 
 import { Link } from './Navigation.styled';

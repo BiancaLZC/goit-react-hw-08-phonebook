@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { getEmail, getIsLoggedIn, getName } from 'redux/auth/selectors';
+import { getEmail, getIsLoggedIn, getName } from '../redux/auth/selectors';
 
 export const useAuth = () => {
   const userName = useSelector(getName);

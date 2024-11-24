@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { getError } from 'redux/contacts/selectors';
+import { getError } from '../../redux/contacts/selectors';
 import { Typography } from '@mui/material';
 
 const Error = () => {

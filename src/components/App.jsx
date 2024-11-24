@@ -2,10 +2,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './Layout';
-import { fetchCurrentUser } from 'redux/auth/operations';
+import { fetchCurrentUser } from '../redux/auth/operations';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import PublicRoute from './PublicRoute';
-import { getIsRefreshing } from 'redux/auth/selectors';
+import { getIsRefreshing } from '../redux/auth/selectors';
 
 const Home = lazy(() => import('../pages/HomaPage'));
 const Registration = lazy(() => import('../pages/Registration'));

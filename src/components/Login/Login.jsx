@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { logIn } from 'redux/auth/operations';
+import { logIn } from '../../redux/auth/operations';
 import { Box, TextField, Button, Paper } from '@mui/material';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import KeyIcon from '@mui/icons-material/Key';

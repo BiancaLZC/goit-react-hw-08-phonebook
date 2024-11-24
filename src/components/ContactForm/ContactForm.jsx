@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { Notify } from 'notiflix';
-import { getContacts } from 'redux/contacts/selectors';
-import { addContsct } from 'redux/contacts/operations';
+import { getContacts } from '../../redux/contacts/selectors';
+import { addContsct } from '../../redux/contacts/operations';
 import { TextField, Button, Box, Typography, Paper } from '@mui/material';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 

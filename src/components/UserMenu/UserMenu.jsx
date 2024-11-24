@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { logOut } from 'redux/auth/operations';
-import { getEmail } from 'redux/auth/selectors';
+import { logOut } from '../../redux/auth/operations';
+import { getEmail } from '../../redux/auth/selectors';
 import { Box, Typography, Button } from '@mui/material';
 
 const UserMenu = () => {

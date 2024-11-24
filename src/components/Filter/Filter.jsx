@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { update } from 'redux/filter/slice';
+import { update } from '../../redux/filter/slice';
 import { InputLabel, OutlinedInput, InputAdornment } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
