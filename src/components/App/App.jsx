@@ -8,17 +8,14 @@ import Login from '../../Pages/Login/Login';
 import Register from '../../Pages/Register/Register';
 import UserMenu from '../UserMenu/UserMenu';
 import styles from './App.module.css';
-
 const App = () => {
   const dispatch = useDispatch();
   const token = useSelector(state => state.auth.token);
-
   useEffect(() => {
     if (token) {
       dispatch(fetchContacts());
     }
   }, [dispatch, token]);
-
   return (
     <div className={styles.appContainer}>
       <Navigation />
@@ -31,9 +28,9 @@ const App = () => {
           path="/contacts"
           element={token ? <Contacts /> : <Navigate to="/login" replace />}
         />
+        <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     </div>
   );
 };
-
 export default App;
