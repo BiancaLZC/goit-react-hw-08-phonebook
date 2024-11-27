@@ -81,7 +81,7 @@ const Register = () => {
         >
           {isLoading ? 'Registering...' : 'Register'}
         </button>
-        {globalError && <p style={{ color: 'red' }}>Error: {typeof globalError === 'object' ? globalError.message || JSON.stringify(globalError) : globalError}</p>}
+        {globalError && <p style={{ color: 'red' }}>Error: {globalError}</p>}
       </form>
     </div>
   );
