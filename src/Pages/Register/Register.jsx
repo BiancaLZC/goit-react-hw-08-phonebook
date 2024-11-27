@@ -8,13 +8,22 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
+  const [error, setError] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isLoading = useSelector(state => state.auth.isLoading);
-  const error = useSelector(state => state.auth.error);
+  const globalError = useSelector(state => state.auth.error);
 
   const handleSubmit = async event => {
     event.preventDefault();
+
+    // Validare lungime parola
+    if (password.length < 8) {
+      setError('Password must be at least 8 characters long.');
+      return;
+    }
+
+    setError(''); 
     try {
       const result = await dispatch(register({ name, email, password }));
       if (register.fulfilled.match(result)) {
@@ -63,6 +72,7 @@ const Register = () => {
             required
           />
         </label>
+        {error && <p style={{ color: 'red' }}>Error: {typeof error === 'object' ? error.message || JSON.stringify(error) : error}</p>}
         <br />
         <button
           className={styles.registerBtn}
@@ -71,7 +81,7 @@ const Register = () => {
         >
           {isLoading ? 'Registering...' : 'Register'}
         </button>
-        {error && <p style={{ color: 'red' }}>Error: {error}</p>}
+        {globalError && <p style={{ color: 'red' }}>Error: {typeof globalError === 'object' ? globalError.message || JSON.stringify(globalError) : globalError}</p>}
       </form>
     </div>
   );
